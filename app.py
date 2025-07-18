@@ -240,7 +240,7 @@ elif menu == "Bahan Kimia Anorganik":
     st.header("🧪 Bahan Kimia Anorganik")
     st.info("Aplikasi ini menyajikan daftar senyawa kimia organik berbahaya lengkap dengan rumus molekul, jenis bahaya, cara penanganan, manfaat, keparahan ,dan struktur molekul otomatis dari PubChem.")
 
-    data_anorganik = [
+    senyawa_list = [
     ("Sodium chloride", "NaCl", "Iritasi jika tertelan dalam jumlah besar", "Rendah", "Tangani biasa, hindari kontak mata", "Garam dapur, pengawet makanan"),
     ("Sulfuric acid", "H2SO4", "Korosif, menyebabkan luka bakar", "Tinggi", "Gunakan sarung tangan, pelindung mata, dan ventilasi", "Produksi pupuk, baterai"),
     ("Ammonia", "NH3", "Iritasi saluran pernapasan, beracun dalam konsentrasi tinggi", "Tinggi", "Gunakan masker dan ventilasi, hindari inhalasi", "Pembersih, pupuk"),
