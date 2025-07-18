@@ -19,6 +19,36 @@ if menu == "Home":
     st.markdown("### Selamat datang!")
     st.write("Aplikasi ini memberikan informasi menarik tentang berbagai *senyawa kimia organik* dan *anorganik*.")
     st.markdown("> Yuk, eksplorasi dunia kimia bersama kami! 💡")
+    import streamlit as st
+
+# URL gambar dari Pinterest (gambar langsung)
+    background_image_url = "https://i.pinimg.com/1200x/fa/3a/56/fa3a56b36e952c9edd9c181d2bce2dd4.jpg"
+
+# Tambahkan CSS untuk latar belakang
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+        background-image: url("{background_image_url}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }}
+
+    /* Opsional: transparansi kontainer agar teks tetap terbaca */
+    .block-container {{
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 2rem;
+        border-radius: 12px;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Konten aplikasi Streamlit
+st.title("Aplikasi Kimia 🧪")
+st.write("Latar belakang sudah diubah dengan gambar dari Pinterest.")
 
 # --- Halaman Kimia Organik ---
 elif menu == "Bahan Kimia Organik":
