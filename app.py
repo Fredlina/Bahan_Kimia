@@ -21,9 +21,9 @@ def get_hazard_symbol(bahaya):
         return "❓"
 
 st.set_page_config(page_title="Aplikasi Informasi Bahan Kimia", layout="centered")
-st.title("🧪 Daftar Senyawa Kimia Organik Berbahaya")
+st.title("🧪 Senyawa Kimia Berbahaya")
 st.markdown("""
-Aplikasi ini menyajikan daftar **150 senyawa kimia organik berbahaya** lengkap dengan **rumus molekul**, **jenis bahaya**, **cara penanganan**, **manfaat**, **keparahan** ,dan **struktur molekul otomatis dari PubChem**.
+Aplikasi ini menyajikan daftar **senyawa kimia berbahaya** lengkap dengan **rumus molekul**, **jenis bahaya**, **cara penanganan**, **manfaat**, **keparahan** ,dan **struktur molekul otomatis dari PubChem**.
 """)
 
 # Data utama hingga 150 senyawa
