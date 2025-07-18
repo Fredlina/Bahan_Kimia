@@ -168,7 +168,7 @@ elif menu == "Bahan Kimia Organik":
     ("Triethylene glycol", "C6H14O4", "Iritasi ringan", "Sedang", "Gunakan ventilasi cukup", "Humektan dan disinfektan")
 ]
         # Tambah dummy senyawa 21–150
-    for i in range(21, 151):
+    for i in range(21, 138):
         senyawa_list.append((
             f"Senyawa {i}",
             "-",
@@ -384,7 +384,7 @@ elif menu == "Bahan Kimia Anorganik":
     ("Potassium permanganate", "KMnO4", "Oksidator kuat", "Tinggi", "Tangani dengan APD", "Desinfektan, oksidator")
     ]
     
-    for i in range(140, 290):
+    for i in range(139, 287):
         senyawa_list.append((
         f"Senyawa {i}",
         "-",  # Rumus dummy
