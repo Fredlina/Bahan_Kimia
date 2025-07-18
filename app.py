@@ -5,6 +5,29 @@ import pandas as pd
 from PIL import Image
 import base64
 
+# Fungsi menampilkan data organik
+def tampilkan_data_organik():
+    st.subheader("Bahan Kimia Organik")
+    # Di sini tampilkan tabel atau daftar bahan kimia organik
+    # Contoh:
+    st.write("Menampilkan data bahan kimia organik...")
+
+# Fungsi menampilkan data anorganik
+def tampilkan_data_anorganik():
+    st.subheader("Bahan Kimia Anorganik")
+    # Tampilkan data bahan kimia anorganik
+    st.write("Menampilkan data bahan kimia anorganik...")
+
+# -------------------------------
+# Halaman utama / navigasi menu
+# -------------------------------
+
+# Sidebar menu
+menu = st.sidebar.selectbox(
+    "Pilih Halaman",
+    ["Beranda", "Bahan Kimia Organik", "Bahan Kimia Anorganik"]
+)
+
 # --- Konfigurasi halaman utama ---
 st.set_page_config(page_title="Informasi Bahan Kimia", page_icon="🧪", layout="wide")
 
