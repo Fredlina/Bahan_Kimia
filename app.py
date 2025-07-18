@@ -238,7 +238,7 @@ with st.expander("📘 Legenda Simbol Bahaya"):
     - ☢️ = Neurotoksik / Toksik tinggi  
     - ❓ = Bahaya tidak diketahui  
     """)
-)
+    
 # --- Halaman Kimia Anorganik ---
 elif menu == "Bahan Kimia Anorganik":
     st.header("🧪 Bahan Kimia Anorganik")
