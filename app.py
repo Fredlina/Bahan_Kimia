@@ -53,7 +53,7 @@ if menu == "Home":
 
 # --- Halaman Kimia Organik ---
 elif menu == "Bahan Kimia Organik":
-    st.header("🧬 Bahan Kimia Organik")
+    st.header("<h1 style='text-align: center;'>🧬 Bahan Kimia Organik")
     st.info("Aplikasi ini menyajikan daftar senyawa kimia organik berbahaya lengkap dengan rumus molekul, jenis bahaya, cara penanganan, manfaat, keparahan ,dan struktur molekul otomatis dari PubChem.")
     # URL gambar dari Pinterest (gambar langsung)
     background_image_url = "https://i.pinimg.com/736x/87/8e/98/878e9849d902b1d98fe2eb8e195e8769.jpg"
