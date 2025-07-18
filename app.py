@@ -212,11 +212,11 @@ elif menu == "Bahan Kimia Organik":
 
         
     # Tabel ringkasan
-     with st.expander("📊 Lihat Tabel Data Lengkap"):
+    with st.expander("📊 Lihat Tabel Data Lengkap"):
           st.dataframe(filtered_df, use_container_width=True)
 
     # Legenda simbol bahaya
-     with st.expander("📘 Legenda Simbol Bahaya"):
+    with st.expander("📘 Legenda Simbol Bahaya"):
           st.markdown("""
           - ☠️ = Karsinogen / Sangat toksik  
           - ⚠️ = Iritasi atau bahaya sedang  
