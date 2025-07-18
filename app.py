@@ -1,9 +1,18 @@
 import streamlit as st
 import streamlit as st
 import streamlit as st
+import streamlit as st
 import pandas as pd
+from googletrans import Translator
 from PIL import Image
 import base64
+
+translator = Translator()
+language = st.selectbox("Pilih Bahasa / Choose Language", ["Indonesia", "English"])
+def _(text):
+    if language == "English":
+        return translator.translate(text, dest='en').text
+    return text
 
 # --- Konfigurasi halaman utama ---
 st.set_page_config(page_title="Informasi Bahan Kimia", page_icon="🧪", layout="wide")
