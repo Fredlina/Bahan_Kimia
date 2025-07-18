@@ -181,7 +181,6 @@ elif menu == "Bahan Kimia Anorganik":
     st.info("Berikut beberapa senyawa anorganik yang umum digunakan:")
 
     data_anorganik = [
-        {"},
     ]
 
     for senyawa in data_anorganik:
