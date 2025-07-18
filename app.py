@@ -230,7 +230,7 @@ elif menu == "Bahan Kimia Organik":
 # --- Halaman Kimia Anorganik ---
 elif menu == "Bahan Kimia Anorganik":
     st.header("🧪 Bahan Kimia Anorganik")
-    st.info("Aplikasi ini menyajikan daftar senyawa kimia organik berbahaya lengkap dengan rumus molekul, jenis bahaya, cara penanganan, manfaat, keparahan ,dan struktur molekul otomatis dari PubChem.")
+    st.info("Aplikasi ini menyajikan daftar senyawa kimia anorganik berbahaya lengkap dengan rumus molekul, jenis bahaya, cara penanganan, manfaat, keparahan ,dan struktur molekul otomatis dari PubChem.")
 
     senyawa_list = [
     ("Sodium chloride", "NaCl", "Iritasi jika tertelan dalam jumlah besar", "Rendah", "Tangani biasa, hindari kontak mata", "Garam dapur, pengawet makanan"),
