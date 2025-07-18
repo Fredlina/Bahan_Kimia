@@ -48,8 +48,8 @@ if menu == "Home":
 
 
 # Konten aplikasi Streamlit
-   st.title("Aplikasi Kimia 🧪")
-   st.write("Latar belakang sudah diubah dengan gambar dari Pinterest.")
+    st.title("Aplikasi Kimia 🧪")
+    st.write("Latar belakang sudah diubah dengan gambar dari Pinterest.")
 
 # --- Halaman Kimia Organik ---
 elif menu == "Bahan Kimia Organik":
