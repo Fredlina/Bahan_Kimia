@@ -393,7 +393,7 @@ elif menu == "Bahan Kimia Anorganik":
     ]
     
     for i in range(140, 290):
-    senyawa_list.append((
+        senyawa_list.append((
         f"Senyawa {i}",
         "-",  # Rumus dummy
         "Bahaya kimia generik",
