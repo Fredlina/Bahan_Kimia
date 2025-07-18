@@ -25,14 +25,13 @@ elif menu == "Bahan Kimia Organik":
     st.header("🧬 Bahan Kimia Organik")
     st.info("Aplikasi ini menyajikan daftar senyawa kimia organik berbahaya lengkap dengan rumus molekul, jenis bahaya, cara penanganan, manfaat, keparahan ,dan struktur molekul otomatis dari PubChem.")
     st.markdown(
-    """
     <style>
     body {
         background-image: url('https://pin.it/HbeB269kT');
         background-size: cover;
     }
     </style>
-    """,
+    ,
     unsafe_allow_html=True
 )
 
