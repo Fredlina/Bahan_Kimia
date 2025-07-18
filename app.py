@@ -168,8 +168,7 @@ elif menu == "Bahan Kimia Organik":
     ("Triethylene glycol", "C6H14O4", "Iritasi ringan", "Sedang", "Gunakan ventilasi cukup", "Humektan dan disinfektan")
 ]
         # Tambah dummy senyawa 21–150
-    nama_senyawa_tambahan = [f"Senyawa Organik {i}" for i in range(0, 138):
-    for nama in nama_senyawa_tambahan:
+    for i in range(21, 151):
         senyawa_list.append((
             f"Senyawa {i}",
             "-",
