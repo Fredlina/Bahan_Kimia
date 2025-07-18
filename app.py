@@ -55,6 +55,35 @@ if menu == "Home":
 elif menu == "Bahan Kimia Organik":
     st.header("🧬 Bahan Kimia Organik")
     st.info("Aplikasi ini menyajikan daftar senyawa kimia organik berbahaya lengkap dengan rumus molekul, jenis bahaya, cara penanganan, manfaat, keparahan ,dan struktur molekul otomatis dari PubChem.")
+    # URL gambar dari Pinterest (gambar langsung)
+    background_image_url = "https://i.pinimg.com/736x/87/8e/98/878e9849d902b1d98fe2eb8e195e8769.jpg"
+
+# Tambahkan CSS untuk latar belakang
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+        background-image: url("{background_image_url}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }}
+
+    /* Opsional: transparansi kontainer agar teks tetap terbaca */
+    .block-container {{
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 2rem;
+        border-radius: 12px;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
+
+
+# Konten aplikasi Streamlit
+    st.title("Aplikasi Kimia 🧪")
+    st.write("Latar belakang sudah diubah dengan gambar dari Pinterest.")
    
     senyawa_list = [
     ("Benzene", "C6H6", "Karsinogen, mudah menguap", "Tinggi", "Gunakan sarung tangan dan masker, ventilasi baik", "Pelarut industri, bahan baku plastik"),
@@ -262,6 +291,35 @@ elif menu == "Bahan Kimia Organik":
 elif menu == "Bahan Kimia Anorganik":
     st.header("🧪 Bahan Kimia Anorganik")
     st.info("Aplikasi ini menyajikan daftar senyawa kimia anorganik berbahaya lengkap dengan rumus molekul, jenis bahaya, cara penanganan, manfaat, keparahan ,dan struktur molekul otomatis dari PubChem.")
+    # URL gambar dari Pinterest (gambar langsung)
+    background_image_url = "https://i.pinimg.com/736x/d1/ba/41/d1ba4160594e6064cfa9781cf9415fa7.jpg"
+
+# Tambahkan CSS untuk latar belakang
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+        background-image: url("{background_image_url}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }}
+
+    /* Opsional: transparansi kontainer agar teks tetap terbaca */
+    .block-container {{
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 2rem;
+        border-radius: 12px;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
+
+
+# Konten aplikasi Streamlit
+    st.title("Aplikasi Kimia 🧪")
+    st.write("Latar belakang sudah diubah dengan gambar dari Pinterest.")
 
     senyawa_list = [
     ("Sodium chloride", "NaCl", "Iritasi jika tertelan dalam jumlah besar", "Rendah", "Tangani biasa, hindari kontak mata", "Garam dapur, pengawet makanan"),
