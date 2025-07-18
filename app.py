@@ -16,7 +16,7 @@ if menu == "Home":
     st.markdown("<h1 style='text-align: center;'>🧪 Aplikasi Informasi Bahan Kimia</h1>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: center;'>📘 Edukasi Kimia Organik & Anorganik</h3>", unsafe_allow_html=True)
 
- st.image("https://cdn-icons-png.flaticon.com/512/3004/3004669.png", width=200, caption="Ilustrasi Kimia")
+    st.image("https://cdn-icons-png.flaticon.com/512/3004/3004669.png", width=200, caption="Ilustrasi Kimia")
 
     st.markdown("### Selamat datang!")
     st.write("Aplikasi ini memberikan informasi menarik tentang berbagai *senyawa kimia organik* dan *anorganik*.")
