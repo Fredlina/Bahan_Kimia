@@ -9,7 +9,8 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #ffff00;
+        background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+        background-size: cover;
     }
     </style>
     """,
