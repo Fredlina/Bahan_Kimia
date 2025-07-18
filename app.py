@@ -238,15 +238,226 @@ elif menu == "Bahan Kimia Organik":
 # --- Halaman Kimia Anorganik ---
 elif menu == "Bahan Kimia Anorganik":
     st.header("🧪 Bahan Kimia Anorganik")
-    search = st.text_input("🔎 Cari senyawa kimia...", key="search_anorganik")  # ✅ ditambahkan key unik
-    st.info("Berikut beberapa senyawa anorganik yang umum digunakan:")
+    st.info("Aplikasi ini menyajikan daftar senyawa kimia organik berbahaya lengkap dengan rumus molekul, jenis bahaya, cara penanganan, manfaat, keparahan ,dan struktur molekul otomatis dari PubChem.")
 
     data_anorganik = [
+    ("Sodium chloride", "NaCl", "Iritasi jika tertelan dalam jumlah besar", "Rendah", "Tangani biasa, hindari kontak mata", "Garam dapur, pengawet makanan"),
+    ("Sulfuric acid", "H2SO4", "Korosif, menyebabkan luka bakar", "Tinggi", "Gunakan sarung tangan, pelindung mata, dan ventilasi", "Produksi pupuk, baterai"),
+    ("Ammonia", "NH3", "Iritasi saluran pernapasan, beracun dalam konsentrasi tinggi", "Tinggi", "Gunakan masker dan ventilasi, hindari inhalasi", "Pembersih, pupuk"),
+    ("Sodium hydroxide", "NaOH", "Korosif, dapat merusak jaringan kulit", "Tinggi", "Gunakan APD lengkap", "Sabun, industri kimia"),
+    ("Nitric acid", "HNO3", "Korosif, uapnya berbahaya", "Tinggi", "Gunakan pelindung mata, sarung tangan, dan fume hood", "Pupuk, peledak"),
+    ("Calcium carbonate", "CaCO3", "Tidak berbahaya dalam jumlah kecil", "Rendah", "Tangani biasa, hindari debu berlebihan", "Obat maag, bahan pengisi"),
+    ("Hydrogen peroxide", "H2O2", "Iritasi kulit dan mata, dapat meledak pada konsentrasi tinggi", "Sedang", "Gunakan pelindung tangan dan simpan di tempat sejuk", "Disinfektan, pemutih"),
+    ("Chlorine", "Cl2", "Beracun, iritasi saluran pernapasan", "Tinggi", "Gunakan di tempat berventilasi dengan masker", "Disinfeksi air, plastik"),
+    ("Aluminum sulfate", "Al2(SO4)3", "Iritasi ringan pada kulit dan mata", "Sedang", "Gunakan sarung tangan", "Pengolahan air, industri kertas"),
+    ("Sodium bicarbonate", "NaHCO3", "Iritasi sangat ringan", "Rendah", "Tangani biasa", "Makanan, pembersih, farmasi"),
+    ("Potassium nitrate", "KNO3", "Oksidator kuat, bahaya kebakaran", "Sedang", "Simpan terpisah dari bahan mudah terbakar", "Pupuk, bahan peledak"),
+    ("Calcium hydroxide", "Ca(OH)2", "Korosif, iritasi kulit dan mata", "Sedang", "Gunakan pelindung kulit dan mata", "Konstruksi, pengolahan air"),
+    ("Magnesium sulfate", "MgSO4", "Relatif aman", "Rendah", "Tangani biasa", "Obat pencahar, pertanian"),
+    ("Zinc oxide", "ZnO", "Iritasi jika terhirup", "Rendah", "Gunakan masker debu", "Kosmetik, karet, cat"),
+    ("Ferric chloride", "FeCl3", "Korosif dan iritasi", "Sedang", "Gunakan APD lengkap", "Pengolahan air, etsa logam"),
+    ("Sodium nitrate", "NaNO3", "Oksidator kuat", "Sedang", "Hindari kontak dengan bahan mudah terbakar", "Pupuk, bahan peledak"),
+    ("Copper sulfate", "CuSO4", "Toksik jika tertelan", "Sedang", "Gunakan sarung tangan dan masker", "Fungisida, elektrolisis"),
+    ("Lead nitrate", "Pb(NO3)2", "Beracun, karsinogen", "Tinggi", "Gunakan APD lengkap, ventilasi baik", "Laboratorium, bahan peledak"),
+    ("Mercury(II) chloride", "HgCl2", "Sangat toksik", "Tinggi", "Gunakan APD lengkap dan lemari asam", "Riset, antiseptik (dulu)"),
+    ("Barium chloride", "BaCl2", "Beracun jika tertelan", "Tinggi", "Hindari inhalasi dan konsumsi", "Riset laboratorium, industri"),
+    ("Potassium permanganate", "KMnO4", "Oksidator kuat", "Tinggi", "Hindari kontak dengan bahan organik", "Disinfektan, pengolahan air"),
+    ("Sodium thiosulfate", "Na2S2O3", "Iritasi ringan", "Rendah", "Tangani biasa", "Fotografi, penetralisir klorin"),
+    ("Calcium chloride", "CaCl2", "Iritasi kulit dan mata", "Sedang", "Gunakan sarung tangan", "Pengering, penghilang es"),
+    ("Aluminum oxide", "Al2O3", "Iritasi jika terhirup", "Rendah", "Gunakan masker debu", "Abrasif, bahan keramik"),
+    ("Silicon dioxide", "SiO2", "Debu dapat mengiritasi paru-paru", "Sedang", "Gunakan masker", "Kaca, keramik"),
+    ("Phosphoric acid", "H3PO4", "Korosif", "Sedang", "Gunakan pelindung kulit dan mata", "Pupuk, makanan, deterjen"),
+    ("Sodium sulfite", "Na2SO3", "Iritasi mata dan kulit", "Sedang", "Gunakan pelindung", "Pengawet makanan, fotografi"),
+    ("Potassium dichromate", "K2Cr2O7", "Karsinogenik dan sangat toksik", "Tinggi", "Gunakan APD lengkap", "Analisis kimia, elektroplating"),
+    ("Magnesium oxide", "MgO", "Relatif aman", "Rendah", "Tangani biasa", "Obat lambung, bahan tahan api"),
+    ("Zinc sulfate", "ZnSO4", "Iritasi jika tertelan", "Sedang", "Gunakan sarung tangan", "Suplemen, pertanian"),
+    ("Nickel(II) sulfate", "NiSO4", "Iritasi & karsinogenik", "Tinggi", "Gunakan sarung tangan & pelindung pernapasan", "Galvanisasi, elektroplating"),
+    ("Chromium(VI) oxide", "CrO3", "Karsinogenik, oksidator kuat", "Tinggi", "APD lengkap dan fume hood", "Elektroplating, oksidasi"),
+    ("Boric acid", "H3BO3", "Toksik jika tertelan dalam jumlah besar", "Sedang", "Tangani dengan hati-hati", "Antiseptik, pestisida"),
+    ("Stannous chloride", "SnCl2", "Iritasi", "Sedang", "Sarung tangan dan ventilasi", "Pewarna, reduktor"),
+    ("Mercury(II) chloride", "HgCl2", "Sangat toksik", "Tinggi", "APD lengkap dan lemari asam", "Pengawet, sintesis kimia"),
+    ("Barium nitrate", "Ba(NO3)2", "Toksik dan oksidator", "Tinggi", "Jauhkan dari panas", "Kembang api, bahan peledak"),
+    ("Ammonium nitrate", "NH4NO3", "Oksidator, risiko ledakan", "Tinggi", "Tangani dengan ketat", "Pupuk, bahan peledak"),
+    ("Sodium sulfide", "Na2S", "Berbau busuk, korosif", "Tinggi", "Tangani dalam ventilasi", "Industri kertas dan kulit"),
+    ("Potassium dichromate", "K2Cr2O7", "Karsinogen, toksik", "Tinggi", "APD lengkap, simpan rapat", "Analisis laboratorium"),
+    ("Zinc chloride", "ZnCl2", "Korosif", "Tinggi", "Gunakan pelindung mata", "Pelarut, soldering"),
+    ("Calcium phosphate", "Ca3(PO4)2", "Iritasi ringan", "Rendah", "Tangani biasa", "Pupuk, suplemen tulang"),
+    ("Ferric sulfate", "Fe2(SO4)3", "Iritasi kulit", "Sedang", "Gunakan sarung tangan", "Pengolahan air, koagulan"),
+    ("Sodium carbonate", "Na2CO3", "Iritasi ringan", "Rendah", "Tangani biasa", "Pembersih, industri kaca"),
+    ("Magnesium hydroxide", "Mg(OH)2", "Iritasi ringan", "Rendah", "Tangani biasa", "Antasida, deodorant"),
+    ("Sodium nitrite", "NaNO2", "Toksik, oksidator", "Tinggi", "Jauhkan dari panas dan bahan organik", "Pengawet makanan, industri kimia"),
+    ("Ammonium chloride", "NH4Cl", "Iritasi pernapasan", "Sedang", "Ventilasi baik", "Elektrolit, pembersih logam"),
+    ("Sodium iodide", "NaI", "Iritasi ringan", "Rendah", "Tangani biasa", "Obat tiroid, fotografi"),
+    ("Potassium iodide", "KI", "Iritasi ringan", "Rendah", "Tangani biasa", "Obat tiroid, perlindungan radiasi"),
+    ("Barium sulfate", "BaSO4", "Tidak larut, tidak toksik", "Rendah", "Tangani biasa", "Media radiologi, pigmen"),
+    ("Aluminum nitrate", "Al(NO3)3", "Oksidator, iritasi", "Sedang", "Gunakan APD", "Bahan kimia laboratorium"),
+    ("Sodium chromate", "Na2CrO4", "Karsinogenik", "Tinggi", "Gunakan APD lengkap", "Oksidator, analisis kimia"),
+    ("Lead(II) acetate", "Pb(C2H3O2)2", "Toksik", "Tinggi", "Tangani dengan hati-hati", "Pigmen, analisis logam"),
+    ("Tin(II) fluoride", "SnF2", "Toksik dalam jumlah besar", "Sedang", "Tangani sesuai protokol", "Pasta gigi, pelindung gigi"),
+    ("Cadmium chloride", "CdCl2", "Sangat toksik", "Tinggi", "Gunakan lemari asam", "Elektroplating, riset"),
+    ("Antimony trichloride", "SbCl3", "Korosif dan iritasi", "Tinggi", "Gunakan pelindung lengkap", "Sintesis senyawa antimon"),
+    ("Zinc nitrate", "Zn(NO3)2", "Iritasi", "Sedang", "Tangani di ventilasi", "Sintesis bahan kimia"),
+    ("Ammonium phosphate", "(NH4)3PO4", "Iritasi ringan", "Rendah", "Tangani biasa", "Pupuk"),
+    ("Sodium hypochlorite", "NaClO", "Oksidator, iritasi", "Sedang", "Gunakan sarung tangan", "Pemutih, disinfektan"),
+    ("Hydrochloric acid", "HCl", "Korosif kuat", "Tinggi", "Gunakan pelindung mata dan sarung tangan", "Industri kimia, pembersih logam"),
+    ("Nitrous oxide", "N2O", "Gas anestetik, risiko jika disalahgunakan", "Sedang", "Gunakan hanya dalam pengawasan", "Obat bius, makanan aerosol"),
+      ("Sodium bromide", "NaBr", "Iritasi ringan", "Rendah", "Tangani biasa", "Fotografi, farmasi"),
+    ("Potassium permanganate", "KMnO4", "Oksidator kuat, iritasi", "Tinggi", "Gunakan sarung tangan", "Disinfektan, pengolahan air"),
+    ("Calcium carbonate", "CaCO3", "Iritasi ringan", "Rendah", "Tangani biasa", "Bahan bangunan, antasida"),
+    ("Beryllium sulfate", "BeSO4", "Karsinogenik, sangat toksik", "Tinggi", "Tangani dalam fume hood", "Riset, industri paduan logam"),
+    ("Ammonium sulfate", "(NH4)2SO4", "Iritasi ringan", "Rendah", "Tangani biasa", "Pupuk, pengolahan air"),
+    ("Sodium thiosulfate", "Na2S2O3", "Iritasi ringan", "Rendah", "Tangani biasa", "Fotografi, detoksifikasi sianida"),
+    ("Phosphorus pentachloride", "PCl5", "Korosif, reaktif dengan air", "Tinggi", "Tangani di lemari asam", "Sintesis organik"),
+    ("Sodium fluoride", "NaF", "Toksik jika tertelan", "Tinggi", "Hindari inhalasi & konsumsi", "Pasta gigi, pestisida"),
+    ("Silver sulfate", "Ag2SO4", "Toksik bagi organisme air", "Sedang", "Tangani dengan hati-hati", "Elektrolit, kimia analitik"),
+    ("Potassium carbonate", "K2CO3", "Iritasi kulit & mata", "Sedang", "Gunakan sarung tangan", "Sabun, produksi kaca"),
+    ("Calcium chloride", "CaCl2", "Higroskopis, iritasi ringan", "Sedang", "Tangani dengan sarung tangan", "De-icing, pengering"),
+    ("Sodium phosphate", "Na3PO4", "Iritasi kulit", "Sedang", "Gunakan pelindung tangan", "Pembersih, pengolahan air"),
+    ("Potassium fluoride", "KF", "Korosif, toksik", "Tinggi", "Gunakan APD lengkap", "Sintesis kimia, etsa kaca"),
+    ("Sodium cyanate", "NaOCN", "Toksik", "Tinggi", "Tangani dengan ventilasi baik", "Sintesis organik, kimia industri"),
+    ("Zinc sulfate", "ZnSO4", "Iritasi ringan", "Sedang", "Tangani biasa", "Pupuk, suplementasi seng"),
+    ("Silver bromide", "AgBr", "Sensitif cahaya", "Sedang", "Tangani dalam ruang gelap", "Fotografi"),
+    ("Sodium metabisulfite", "Na2S2O5", "Iritasi saluran napas", "Sedang", "Gunakan ventilasi", "Pengawet, antioksidan"),
+    ("Magnesium chloride", "MgCl2", "Iritasi ringan", "Rendah", "Tangani biasa", "De-icing, industri tekstil"),
+    ("Lead(II) nitrate", "Pb(NO3)2", "Toksik, karsinogenik", "Tinggi", "APD lengkap dan ventilasi", "Sintesis kimia, piroteknik"),
+    ("Sodium bisulfate", "NaHSO4", "Iritasi mata & kulit", "Sedang", "Gunakan sarung tangan", "Pengatur pH"),
+    ("Potassium acetate", "CH3COOK", "Iritasi ringan", "Rendah", "Tangani biasa", "Elektrolit, buffer kimia"),
+    ("Lithium bromide", "LiBr", "Toksik dalam jumlah besar", "Sedang", "Gunakan dengan hati-hati", "Pendingin, industri farmasi"),
+    ("Copper(I) oxide", "Cu2O", "Toksik bagi organisme air", "Sedang", "Tangani dengan sarung tangan", "Pigmen, fungisida"),
+    ("Manganese(II) sulfate", "MnSO4", "Iritasi ringan", "Rendah", "Tangani biasa", "Suplemen mangan, pupuk"),
+    ("Cobalt(II) chloride", "CoCl2", "Sensitif terhadap kelembaban, iritasi", "Sedang", "Simpan kering", "Indikator kelembapan"),
+    ("Nickel(II) nitrate", "Ni(NO3)2", "Iritasi dan toksik", "Tinggi", "Gunakan pelindung lengkap", "Galvanisasi, elektroplating"),
+    ("Chromium(III) oxide", "Cr2O3", "Iritasi ringan", "Sedang", "Tangani biasa", "Pigmen hijau"),
+    ("Titanium dioxide", "TiO2", "Partikel kecil dapat menyebabkan iritasi", "Sedang", "Gunakan masker", "Pigmen putih, kosmetik"),
+    ("Sodium borohydride", "NaBH4", "Reaktif, dapat terbakar", "Tinggi", "Tangani dalam fume hood", "Reduktor kuat"),
+    ("Calcium nitrate", "Ca(NO3)2", "Oksidator, iritasi", "Sedang", "Simpan jauh dari bahan mudah terbakar", "Pupuk, bahan peledak"),
+     ("Sodium hydrosulfite", "Na2S2O4", "Reaktif, iritasi", "Sedang", "Tangani dengan ventilasi baik", "Pemutih tekstil dan kertas"),
+    ("Potassium ferricyanide", "K3[Fe(CN)6]", "Beracun bila terurai", "Tinggi", "Hindari panas berlebih", "Fotografi, kimia analitik"),
+    ("Barium nitrate", "Ba(NO3)2", "Beracun, oksidator", "Tinggi", "Gunakan APD lengkap", "Kembang api, oksidator"),
+    ("Copper(II) acetate", "Cu(C2H3O2)2", "Iritasi kulit", "Sedang", "Gunakan sarung tangan", "Pigmen, pestisida"),
+    ("Sodium aluminate", "NaAlO2", "Korosif, iritasi", "Sedang", "Tangani dengan hati-hati", "Pengolahan air"),
+    ("Potassium iodide", "KI", "Aman dosis kecil, iritasi ringan", "Rendah", "Tangani biasa", "Obat tiroid, fotografi"),
+    ("Silver nitrate", "AgNO3", "Korosif, meninggalkan noda", "Tinggi", "Gunakan sarung tangan", "Fotografi, antiseptik"),
+    ("Zinc chloride", "ZnCl2", "Korosif, iritasi saluran napas", "Tinggi", "Tangani di ruang berventilasi", "Perekat logam, desinfektan"),
+    ("Calcium hydroxide", "Ca(OH)2", "Iritasi kulit dan mata", "Sedang", "Gunakan pelindung", "Bangunan, pengolahan air"),
+    ("Aluminum chloride", "AlCl3", "Reaktif dengan air", "Tinggi", "Tangani di lemari asam", "Katalis, sintesis organik"),
+    ("Magnesium nitrate", "Mg(NO3)2", "Oksidator, iritasi", "Sedang", "Gunakan sarung tangan", "Pupuk, piroteknik"),
+    ("Sodium hypochlorite", "NaClO", "Korosif, uap iritasi", "Tinggi", "Gunakan ventilasi & APD", "Pemutih, desinfektan"),
+    ("Ammonium carbonate", "(NH4)2CO3", "Iritasi ringan", "Sedang", "Tangani biasa", "Aditif makanan, baking"),
+    ("Nickel(II) chloride", "NiCl2", "Karsinogenik, iritasi", "Tinggi", "Tangani dengan APD lengkap", "Galvanisasi, kimia"),
+    ("Chromium(VI) oxide", "CrO3", "Karsinogenik, oksidator kuat", "Tinggi", "Tangani dalam lemari asam", "Oksidator industri"),
+    ("Lithium hydroxide", "LiOH", "Korosif", "Tinggi", "Gunakan sarung tangan dan pelindung mata", "Baterai, kimia industri"),
+    ("Sodium chlorite", "NaClO2", "Oksidator, iritasi", "Tinggi", "Tangani dengan hati-hati", "Desinfektan, bleaching"),
+    ("Barium chloride", "BaCl2", "Beracun jika tertelan", "Tinggi", "Hindari kontak langsung", "Analisis kimia"),
+    ("Manganese dioxide", "MnO2", "Iritasi ringan", "Sedang", "Tangani biasa", "Baterai, katalis"),
+    ("Iron(III) chloride", "FeCl3", "Korosif, iritasi", "Sedang", "Tangani dengan pelindung", "Etching, pengolahan air"),
+    ("Potassium nitrite", "KNO2", "Toksik jika tertelan", "Tinggi", "Tangani sesuai protokol", "Pengawet, kimia industri"),
+    ("Sodium arsenite", "NaAsO2", "Sangat toksik", "Tinggi", "Tangani dalam fume hood", "Riset, pestisida (dilarang)"),
+    ("Aluminum sulfate", "Al2(SO4)3", "Iritasi ringan", "Sedang", "Tangani biasa", "Koagulan air"),
+    ("Sodium percarbonate", "Na2CO3·1.5H2O2", "Iritasi, oksidator", "Sedang", "Simpan kering", "Pembersih, pemutih"),
+    ("Potassium bichromate", "K2Cr2O7", "Karsinogenik, sangat toksik", "Tinggi", "Tangani dengan APD lengkap", "Oksidator, analisis kimia"),
+    ("Cobalt(II) sulfate", "CoSO4", "Toksik, iritasi", "Tinggi", "Tangani dengan hati-hati", "Elektroplating, pewarna"),
+    ("Ferric sulfate", "Fe2(SO4)3", "Iritasi ringan", "Sedang", "Gunakan pelindung mata", "Pengolahan air, mordant"),
+    ("Sodium dichromate", "Na2Cr2O7", "Karsinogenik, toksik", "Tinggi", "Tangani di lemari asam", "Pewarna, oksidator"),
+    ("Tin(II) chloride", "SnCl2", "Iritasi, reaktif", "Sedang", "Simpan kedap udara", "Reduktor, pelapisan logam"),
+    ("Magnesium carbonate", "MgCO3", "Iritasi ringan", "Rendah", "Tangani biasa", "Antasida, kosmetik"),
+    ("Sodium sulfate", "Na2SO4", "Iritasi ringan", "Rendah", "Tangani biasa", "Pembuatan deterjen, kertas"),
+    ("Potassium carbonate", "K2CO3", "Iritasi mata dan kulit", "Sedang", "Gunakan sarung tangan", "Pembuatan kaca, sabun"),
+    ("Calcium nitrate", "Ca(NO3)2", "Oksidator, iritasi", "Sedang", "Tangani dengan hati-hati", "Pupuk, bahan peledak"),
+    ("Ammonium dichromate", "(NH4)2Cr2O7", "Karsinogenik, oksidator", "Tinggi", "Gunakan APD lengkap", "Percobaan kimia, oksidator"),
+    ("Sodium acetate", "CH3COONa", "Iritasi ringan", "Rendah", "Tangani biasa", "Buffer, pengawet"),
+    ("Lithium carbonate", "Li2CO3", "Toksik dosis tinggi", "Sedang", "Gunakan sarung tangan", "Obat bipolar, baterai"),
+    ("Strontium chloride", "SrCl2", "Iritasi ringan", "Sedang", "Tangani dengan sarung tangan", "Piroteknik, penelitian"),
+    ("Potassium bromide", "KBr", "Iritasi ringan", "Sedang", "Tangani biasa", "Fotografi, obat penenang"),
+    ("Ammonium persulfate", "(NH4)2S2O8", "Oksidator, iritasi", "Sedang", "Tangani dengan hati-hati", "Polimerisasi, bleaching"),
+    ("Sodium silicate", "Na2SiO3", "Korosif ringan", "Sedang", "Gunakan sarung tangan", "Perekat, pengolahan air"),
+    ("Cobalt(II) chloride", "CoCl2", "Karsinogenik, iritasi", "Tinggi", "Tangani dengan APD", "Indikator kelembaban"),
+    ("Potassium alum", "KAl(SO4)2·12H2O", "Iritasi ringan", "Rendah", "Tangani biasa", "Pengolahan air, penyamakan kulit"),
+    ("Sodium bicarbonate", "NaHCO3", "Aman, iritasi ringan", "Rendah", "Tangani biasa", "Baking soda, buffer"),
+    ("Ammonium phosphate", "(NH4)3PO4", "Iritasi ringan", "Sedang", "Gunakan pelindung", "Pupuk, pengolahan air"),
+    ("Lead nitrate", "Pb(NO3)2", "Sangat toksik", "Tinggi", "Tangani dengan APD lengkap", "Laboratorium, piroteknik"),
+    ("Zinc sulfate", "ZnSO4", "Iritasi ringan", "Sedang", "Tangani biasa", "Nutrisi, galvanisasi"),
+    ("Boron trioxide", "B2O3", "Iritasi saluran pernapasan", "Sedang", "Gunakan masker", "Kaca, keramik"),
+    ("Sodium thiosulfate", "Na2S2O3", "Iritasi ringan", "Rendah", "Tangani biasa", "Fotografi, penghilang klorin"),
+    ("Mercury(II) chloride", "HgCl2", "Sangat toksik", "Tinggi", "Tangani di fume hood", "Laboratorium (terbatas)"),
+    ("Sodium nitroprusside", "Na2[Fe(CN)5NO]", "Beracun", "Tinggi", "Gunakan APD", "Uji kimia, obat darurat"),
+    ("Potassium hydroxide", "KOH", "Sangat korosif", "Tinggi", "Tangani dengan pelindung lengkap", "Sabun, biodiesel"),
+    ("Calcium hypochlorite", "Ca(ClO)2", "Oksidator, korosif", "Tinggi", "Simpan kering", "Pemutih, disinfektan"),
+    ("Zinc oxide", "ZnO", "Iritasi ringan", "Rendah", "Tangani biasa", "Kosmetik, cat, karet"),
+    ("Aluminum hydroxide", "Al(OH)3", "Iritasi ringan", "Rendah", "Tangani biasa", "Antasida, bahan pemadam api"),
+    ("Sodium borohydride", "NaBH4", "Reaktif, berbahaya bila basah", "Tinggi", "Tangani kering", "Reduksi kimia"),
+    ("Bismuth nitrate", "Bi(NO3)3", "Iritasi sedang", "Sedang", "Gunakan sarung tangan", "Kosmetik, kimia"),
+    ("Thorium dioxide", "ThO2", "Radioaktif", "Tinggi", "Tangani sesuai protokol radiasi", "Industri nuklir"),
+    ("Sodium metabisulfite", "Na2S2O5", "Iritasi pernapasan", "Sedang", "Gunakan ventilasi baik", "Pengawet, antioksidan"),
+    ("Potassium permanganate", "KMnO4", "Oksidator kuat", "Tinggi", "Tangani dengan APD", "Desinfektan, oksidator")
     ]
 
-    for senyawa in data_anorganik:
-        st.subheader(senyawa["Nama"])
-        st.markdown(f"*Rumus:* {senyawa['Rumus']}  \n*Kegunaan:* {senyawa['Kegunaan']}")
+      for i in range(21, 151):
+        senyawa_list.append((
+            f"Senyawa {i}",
+            "-",  # Rumus dummy
+            "Bahaya kimia generik",
+            "Sedang",
+            "Gunakan APD standar",
+            "Data manfaat belum tersedia"
+        ))
+        
+        columns = ["Senyawa", "Rumus Molekul", "Bahaya", "Keparahan", "Penanganan", "Manfaat"]
+        df = pd.DataFrame(senyawa_list, columns=columns)
+
+# Pencarian
+        search = st.text_input("🔎 Cari senyawa kimia anorganik...")
+        if search:
+            filtered_df = df[df['Senyawa'].str.contains(search, case=False)]
+        else:
+            filtered_df = df.copy()
+
+# Dropdown
+        pilih = st.selectbox("📘 Pilih Senyawa untuk Detail", [""] + filtered_df['Senyawa'].tolist())
+        if pilih:
+            row = df[df["Senyawa"] == pilih].iloc[0]
+            st.markdown(f"""
+            ## 🧪 {row['Senyawa']}
+            - **Rumus Molekul:** {row['Rumus Molekul']}
+            - **Bahaya:** {row['Bahaya']}
+            - **Keparahan:** :red[{row['Keparahan']}]
+            - **Penanganan:** {row['Penanganan']}
+            - **Manfaat Umum:** {row['Manfaat']}
+            """)
+
+# Gambar struktur otomatis dari PubChem
+        if not pilih.startswith("Senyawa "):  # hanya tampilkan gambar jika nama bukan dummy
+            nama_url = pilih.lower().replace(" ", "%20")
+            img_url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/{nama_url}/PNG"
+            st.image(img_url, caption=f"Struktur molekul {pilih}", width=300)
+            st.markdown(f"[🔗 Lihat di PubChem](https://pubchem.ncbi.nlm.nih.gov/#query={nama_url})", unsafe_allow_html=True)
+        else:
+            st.warning("Tidak tersedia struktur untuk senyawa ini.")
+
+        import requests
+
+        def pubchem_image_url(nama):
+            nama_url = nama.lower().replace(" ", "%20")
+            img_url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/{nama_url}/PNG"
+            if requests.get(img_url).status_code == 200:
+                return img_url
+                return None
+
+        st.markdown(f"[🔗 Lihat di PubChem](https://pubchem.ncbi.nlm.nih.gov/#query={nama_url})", unsafe_allow_html=True)
+
+# Tabel ringkasan
+        with st.expander("📊 Lihat Tabel Data Lengkap"):
+             st.dataframe(filtered_df, use_container_width=True)
+        with st.expander("📘 Legenda Simbol Bahaya"):
+             st.markdown("""
+             - ☠️ = Karsinogen / Sangat toksik  
+             - ⚠️ = Iritasi atau bahaya sedang  
+             - 🔥 = Mudah terbakar  
+             - 💥 = Peledak  
+             - 🧪 = Korosif  
+             - ☢️ = Neurotoksik / Toksik tinggi  
+             - ❓ = Bahaya tidak diketahui  
+             """)
 
 # --- Halaman Tentang ---
 elif menu == "Tentang Aplikasi":
