@@ -392,7 +392,7 @@ elif menu == "Bahan Kimia Anorganik":
     ("Potassium permanganate", "KMnO4", "Oksidator kuat", "Tinggi", "Tangani dengan APD", "Desinfektan, oksidator")
     ]
 
-      for i in range(21, 151):
+      for i in range(140, 290):
         senyawa_list.append((
             f"Senyawa {i}",
             "-",  # Rumus dummy
