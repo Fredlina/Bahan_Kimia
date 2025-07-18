@@ -182,7 +182,7 @@ elif menu == "Bahan Kimia Organik":
         df = pd.DataFrame(senyawa_list, columns=columns)
 
 # Pencarian
-        search = st.text_input("🔎 Cari senyawa kimia...")
+        search = st.text_input("🔎 Cari senyawa kimia organik...")
         if search:
             filtered_df = df[df['Senyawa'].str.contains(search, case=False)]
         else:
