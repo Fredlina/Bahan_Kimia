@@ -27,7 +27,7 @@ elif menu == "Bahan Kimia Organik":
     st.header("🧬 Bahan Kimia Organik")
     st.info("Berikut beberapa contoh senyawa kimia organik beserta rumus dan kegunaannya:")
 
-    data_organik = [
+    senyawa_list = [
     ("Benzene", "C6H6", "Karsinogen, mudah menguap", "Tinggi", "Gunakan sarung tangan dan masker, ventilasi baik", "Pelarut industri, bahan baku plastik"),
     ("Formaldehyde", "CH2O", "Iritasi mata dan saluran napas, toksik", "Tinggi", "Gunakan APD, hindari paparan langsung", "Pengawet biologis, bahan resin"),
     ("Aceton", "C3H6O", "Mudah terbakar, iritasi", "Sedang", "Jauhkan dari api, gunakan ventilasi", "Pelarut cat dan pembersih kuku"),
@@ -172,7 +172,7 @@ elif menu == "Bahan Kimia Organik":
 
 
     for senyawa in data_organik:
-        st.subheader(senyawa["Nama"])
+        st.subheader(senyawa["Senyawa"])
         st.markdown(f"*Rumus:* {senyawa['Rumus']}  \n*Kegunaan:* {senyawa['Kegunaan']}")
 
 # --- Halaman Kimia Anorganik ---
