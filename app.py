@@ -1,8 +1,21 @@
 import streamlit as st
 import streamlit as st
+import streamlit as st
 import pandas as pd
 from PIL import Image
 import base64
+
+# --- Konfigurasi halaman utama ---
+st.set_page_config(page_title="Informasi Bahan Kimia", page_icon="🧪", layout="wide")
+
+# --- Navigasi ---
+menu = st.sidebar.radio("Navigasi", ["Home", "Bahan Kimia Organik", "Bahan Kimia Anorganik", "Tentang Aplikasi"])
+
+# --- Halaman Home ---
+if menu == "Home":
+    st.markdown("<h1 style='text-align: center;'>🧪 Aplikasi Informasi Bahan Kimia</h1>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center;'>📘 Edukasi Kimia Organik & Anorganik</h3>", unsafe_allow_html=True)
+
 # Mapping jenis bahaya ke nama ikon (dari file lokal atau URL)
 def get_hazard_symbol(bahaya):
     if "karsinogen" in bahaya.lower():
