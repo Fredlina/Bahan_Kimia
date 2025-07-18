@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit as st
 import pandas as pd
 from PIL import Image
 import base64
@@ -19,7 +20,7 @@ def get_hazard_symbol(bahaya):
     else:
         return "❓"
 
-st.set_page_config(page_title="Senyawa Kimia Organik Berbahaya", layout="centered")
+st.set_page_config(page_title="Aplikasi Informasi Bahan Kimia", layout="centered")
 st.title("🧪 Daftar Senyawa Kimia Organik Berbahaya")
 st.markdown("""
 Aplikasi ini menyajikan daftar **150 senyawa kimia organik berbahaya** lengkap dengan **rumus molekul**, **jenis bahaya**, **cara penanganan**, **manfaat**, **keparahan** ,dan **struktur molekul otomatis dari PubChem**.
