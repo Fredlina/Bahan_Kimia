@@ -27,6 +27,18 @@ Aplikasi ini menyajikan daftar **senyawa kimia berbahaya** lengkap dengan **rumu
 """)
 st.markdown("Silakan pilih salah satu menu di bawah untuk melanjutkan:")
 
+menu = st.selectbox(
+    "Pilih Halaman:",
+    [
+        "🏠 Beranda",
+        "📋 Daftar Bahan Kimia",
+        "🔍 Cari Bahan Kimia",
+        "⚠️ Informasi Bahaya",
+        "📦 Panduan Penyimpanan",
+        "🧪 Tentang Aplikasi"
+    ]
+)
+
 # Data utama hingga 150 senyawa
 senyawa_list = [
     ("Benzene", "C6H6", "Karsinogen, mudah menguap", "Tinggi", "Gunakan sarung tangan dan masker, ventilasi baik", "Pelarut industri, bahan baku plastik"),
