@@ -196,7 +196,7 @@ elif menu == "Bahan Kimia Organik":
         st.markdown(f"""
         ## 🧪 {row['Senyawa']}
         - **Rumus Molekul:** {row['Rumus Molekul']}
-        - **Bahaya:** {get_hazard_symbol(row['Bahaya'])}
+        - **Bahaya:** {get_hazard_symbol(row['Bahaya'])} {row['Bahaya']}
         - **Keparahan:** :red[{row['Keparahan']}]
         - **Penanganan:** {row['Penanganan']}
         - **Manfaat Umum:** {row['Manfaat']}
