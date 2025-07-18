@@ -44,6 +44,7 @@ if menu == "Home":
     </style>
     """,
     unsafe_allow_html=True
+    )
 
 
 # Konten aplikasi Streamlit
