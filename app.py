@@ -301,7 +301,7 @@ elif menu == "Bahan Kimia Anorganik":
     ("Sodium hypochlorite", "NaClO", "Oksidator, iritasi", "Sedang", "Gunakan sarung tangan", "Pemutih, disinfektan"),
     ("Hydrochloric acid", "HCl", "Korosif kuat", "Tinggi", "Gunakan pelindung mata dan sarung tangan", "Industri kimia, pembersih logam"),
     ("Nitrous oxide", "N2O", "Gas anestetik, risiko jika disalahgunakan", "Sedang", "Gunakan hanya dalam pengawasan", "Obat bius, makanan aerosol"),
-      ("Sodium bromide", "NaBr", "Iritasi ringan", "Rendah", "Tangani biasa", "Fotografi, farmasi"),
+    ("Sodium bromide", "NaBr", "Iritasi ringan", "Rendah", "Tangani biasa", "Fotografi, farmasi"),
     ("Potassium permanganate", "KMnO4", "Oksidator kuat, iritasi", "Tinggi", "Gunakan sarung tangan", "Disinfektan, pengolahan air"),
     ("Calcium carbonate", "CaCO3", "Iritasi ringan", "Rendah", "Tangani biasa", "Bahan bangunan, antasida"),
     ("Beryllium sulfate", "BeSO4", "Karsinogenik, sangat toksik", "Tinggi", "Tangani dalam fume hood", "Riset, industri paduan logam"),
@@ -331,7 +331,7 @@ elif menu == "Bahan Kimia Anorganik":
     ("Titanium dioxide", "TiO2", "Partikel kecil dapat menyebabkan iritasi", "Sedang", "Gunakan masker", "Pigmen putih, kosmetik"),
     ("Sodium borohydride", "NaBH4", "Reaktif, dapat terbakar", "Tinggi", "Tangani dalam fume hood", "Reduktor kuat"),
     ("Calcium nitrate", "Ca(NO3)2", "Oksidator, iritasi", "Sedang", "Simpan jauh dari bahan mudah terbakar", "Pupuk, bahan peledak"),
-     ("Sodium hydrosulfite", "Na2S2O4", "Reaktif, iritasi", "Sedang", "Tangani dengan ventilasi baik", "Pemutih tekstil dan kertas"),
+    ("Sodium hydrosulfite", "Na2S2O4", "Reaktif, iritasi", "Sedang", "Tangani dengan ventilasi baik", "Pemutih tekstil dan kertas"),
     ("Potassium ferricyanide", "K3[Fe(CN)6]", "Beracun bila terurai", "Tinggi", "Hindari panas berlebih", "Fotografi, kimia analitik"),
     ("Barium nitrate", "Ba(NO3)2", "Beracun, oksidator", "Tinggi", "Gunakan APD lengkap", "Kembang api, oksidator"),
     ("Copper(II) acetate", "Cu(C2H3O2)2", "Iritasi kulit", "Sedang", "Gunakan sarung tangan", "Pigmen, pestisida"),
@@ -392,8 +392,8 @@ elif menu == "Bahan Kimia Anorganik":
     ("Potassium permanganate", "KMnO4", "Oksidator kuat", "Tinggi", "Tangani dengan APD", "Desinfektan, oksidator")
     ]
 
-      for i in range(140, 290):
-          senyawa_list.append((
+    for i in range(140, 290):
+        senyawa_list.append((
             f"Senyawa {i}",
             "-",  # Rumus dummy
             "Bahaya kimia generik",
