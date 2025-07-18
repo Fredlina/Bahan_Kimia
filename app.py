@@ -22,6 +22,48 @@ if menu == "Home":
     st.write("Aplikasi ini memberikan informasi menarik tentang berbagai *senyawa kimia organik* dan *anorganik*.")
     st.markdown("> Yuk, eksplorasi dunia kimia bersama kami! 💡")
 
+# --- Halaman Kimia Organik ---
+elif menu == "Bahan Kimia Organik":
+    st.header("🧬 Bahan Kimia Organik")
+    st.info("Berikut beberapa contoh senyawa kimia organik beserta rumus dan kegunaannya:")
+
+    data_organik = [
+        {"},
+    ]
+
+    for senyawa in data_organik:
+        st.subheader(senyawa["Nama"])
+        st.markdown(f"*Rumus:* {senyawa['Rumus']}  \n*Kegunaan:* {senyawa['Kegunaan']}")
+
+# --- Halaman Kimia Anorganik ---
+elif menu == "Bahan Kimia Anorganik":
+    st.header("🧪 Bahan Kimia Anorganik")
+    st.info("Berikut beberapa senyawa anorganik yang umum digunakan:")
+
+    data_anorganik = [
+        {"},
+    ]
+
+    for senyawa in data_anorganik:
+        st.subheader(senyawa["Nama"])
+        st.markdown(f"*Rumus:* {senyawa['Rumus']}  \n*Kegunaan:* {senyawa['Kegunaan']}")
+
+# --- Halaman Tentang ---
+elif menu == "Tentang Aplikasi":
+    st.header("📘 Tentang Aplikasi")
+    st.markdown("""
+Aplikasi ini dibuat dengan tujuan edukasi untuk mengenalkan berbagai *senyawa kimia organik dan anorganik* 
+beserta rumus molekul dan kegunaannya.
+
+*Fitur:*
+- Navigasi antar halaman
+- Ilustrasi dan penjelasan bahan kimia
+- Ramah pengguna dan interaktif
+
+*Dibuat menggunakan:* Streamlit + Python  
+*Dikembangkan oleh:* Mahasiswa Kimia 👩‍🔬👨‍🔬
+    """)
+
 # Mapping jenis bahaya ke nama ikon (dari file lokal atau URL)
 def get_hazard_symbol(bahaya):
     if "karsinogen" in bahaya.lower():
