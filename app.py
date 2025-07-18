@@ -25,6 +25,7 @@ st.title("🧪 Senyawa Kimia Berbahaya")
 st.markdown("""
 Aplikasi ini menyajikan daftar **senyawa kimia berbahaya** lengkap dengan **rumus molekul**, **jenis bahaya**, **cara penanganan**, **manfaat**, **keparahan** ,dan **struktur molekul otomatis dari PubChem**.
 """)
+st.markdown("Silakan pilih salah satu menu di bawah untuk melanjutkan:")
 
 # Data utama hingga 150 senyawa
 senyawa_list = [
