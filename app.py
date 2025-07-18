@@ -193,15 +193,15 @@ elif menu == "Bahan Kimia Organik":
     ("Triethylene glycol", "C6H14O4", "Iritasi ringan", "Sedang", "Gunakan ventilasi cukup", "Humektan dan disinfektan")
 ]
 
-for i in range(21, 151):
-    senyawa_list.append((
-        f"Senyawa {i}",
-        "-",  # Rumus dummy
-        "Bahaya kimia generik",
-        "Sedang",
-        "Gunakan APD standar",
-        "Data manfaat belum tersedia"
-    ))
+    for i in range(21, 151):
+        senyawa_list.append((
+            f"Senyawa {i}",
+            "-",  # Rumus dummy
+            "Bahaya kimia generik",
+            "Sedang",
+            "Gunakan APD standar",
+            "Data manfaat belum tersedia"
+        ))
     
 # --- Halaman Kimia Anorganik ---
 elif menu == "Bahan Kimia Anorganik":
