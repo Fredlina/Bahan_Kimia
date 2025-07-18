@@ -16,8 +16,6 @@ if menu == "Home":
     st.markdown("<h1 style='text-align: center;'>🧪 Aplikasi Informasi Bahan Kimia</h1>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: center;'>📘 Edukasi Kimia Organik & Anorganik</h3>", unsafe_allow_html=True)
 
-    st.image("https://cdn-icons-png.flaticon.com/512/3004/3004669.png", width=200, caption="Ilustrasi Kimia")
-
     st.markdown("### Selamat datang!")
     st.write("Aplikasi ini memberikan informasi menarik tentang berbagai *senyawa kimia organik* dan *anorganik*.")
     st.markdown("> Yuk, eksplorasi dunia kimia bersama kami! 💡")
@@ -25,7 +23,7 @@ if menu == "Home":
 # --- Halaman Kimia Organik ---
 elif menu == "Bahan Kimia Organik":
     st.header("🧬 Bahan Kimia Organik")
-    st.info("Berikut beberapa contoh senyawa kimia organik beserta rumus dan kegunaannya:")
+    st.info("Aplikasi ini menyajikan daftar senyawa kimia organik berbahaya lengkap dengan rumus molekul, jenis bahaya, cara penanganan, manfaat, keparahan ,dan struktur molekul otomatis dari PubChem.")
 
     senyawa_list = [
     ("Benzene", "C6H6", "Karsinogen, mudah menguap", "Tinggi", "Gunakan sarung tangan dan masker, ventilasi baik", "Pelarut industri, bahan baku plastik"),
