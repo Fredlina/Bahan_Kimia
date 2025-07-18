@@ -44,11 +44,11 @@ if menu == "Home":
     </style>
     """,
     unsafe_allow_html=True
-)
+
 
 # Konten aplikasi Streamlit
-st.title("Aplikasi Kimia 🧪")
-st.write("Latar belakang sudah diubah dengan gambar dari Pinterest.")
+   st.title("Aplikasi Kimia 🧪")
+   st.write("Latar belakang sudah diubah dengan gambar dari Pinterest.")
 
 # --- Halaman Kimia Organik ---
 elif menu == "Bahan Kimia Organik":
