@@ -239,6 +239,7 @@ elif menu == "Bahan Kimia Organik":
 # --- Halaman Kimia Anorganik ---
 elif menu == "Bahan Kimia Anorganik":
     st.header("🧪 Bahan Kimia Anorganik")
+    search = st.text_input("🔎 Cari senyawa kimia...", key="search_anorganik")  # ✅ ditambahkan key unik
     st.info("Berikut beberapa senyawa anorganik yang umum digunakan:")
 
     data_anorganik = [
