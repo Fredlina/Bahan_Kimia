@@ -23,7 +23,6 @@ if menu == "Home":
 # --- Halaman Kimia Organik ---
 elif menu == "Bahan Kimia Organik":
     st.header("🧬 Bahan Kimia Organik")
-    search = st.text_input("🔎 Cari senyawa kimia...", key="search_organik")  # ✅ ditambahkan key unik
     st.info("Aplikasi ini menyajikan daftar senyawa kimia organik berbahaya lengkap dengan rumus molekul, jenis bahaya, cara penanganan, manfaat, keparahan ,dan struktur molekul otomatis dari PubChem.")
 
     senyawa_list = [
