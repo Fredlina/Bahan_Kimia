@@ -64,7 +64,7 @@ elif menu == "Bahan Kimia Organik":
     ("Peracetic acid", "C2H4O3", "Oksidator kuat, korosif", "Tinggi", "APD lengkap", "Sterilisasi alat medis"),
     ("Lauric acid", "C12H24O2", "Iritasi ringan", "Rendah", "Gunakan APD ringan", "Kosmetik & sabun"),
     ("Stearic acid", "C18H36O2", "Tidak berbahaya umum", "Rendah", "Tangani normal", "Lilin & pelumas"),
-    ("Oleic acidt", "C18H34O2", "Iritasi ringan", "Rendah", "APD ringan", "Kosmetik & makanan"),
+    ("Oleic acid", "C18H34O2", "Iritasi ringan", "Rendah", "APD ringan", "Kosmetik & makanan"),
     ("Adipic acid", "C6H10O4", "Iritasi jika tertelan", "Sedang", "Sarung tangan", "Plastik & resin"),
     ("Phthalic acid", "C8H6O4", "Iritasi kulit", "Sedang", "Pelindung kulit", "Pelarut & plastik"),
     ("Trichloroacetic acid", "C2HCl3O2", "Korosif kuat, toksik", "Tinggi", "Ventilasi kuat", "Manipulasi protein laboratorium"),
