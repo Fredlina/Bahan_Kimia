@@ -171,7 +171,7 @@ elif menu == "Bahan Kimia Organik":
 ]
 
 
-    for senyawa in data_organik:
+    for senyawa in senyawa_list:
         st.subheader(senyawa["Senyawa"])
         st.markdown(f"*Rumus:* {senyawa['Rumus']}  \n*Kegunaan:* {senyawa['Kegunaan']}")
 
