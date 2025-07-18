@@ -456,7 +456,7 @@ beserta rumus molekul dan kegunaannya.
 - Ramah pengguna dan interaktif
 
 *Dibuat menggunakan:* Streamlit + Python  
-*Dikembangkan oleh:* Mahasiswa Kimia 👩‍🔬👨‍🔬
+*Dikembangkan oleh:* Kelompok 8 LPK Ankim 1D 👩‍🔬👨‍🔬
     """)
 
 # Mapping jenis bahaya ke nama ikon (dari file lokal atau URL)
