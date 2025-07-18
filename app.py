@@ -5,6 +5,17 @@ import pandas as pd
 from PIL import Image
 import base64
 
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: #f0f2f6;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # --- Konfigurasi halaman utama ---
 st.set_page_config(page_title="Informasi Bahan Kimia", page_icon="🧪", layout="wide")
 
