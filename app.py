@@ -5,18 +5,6 @@ import pandas as pd
 from PIL import Image
 import base64
 
-st.markdown(
-    """
-    <style>
-    body {
-        background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
-        background-size: cover;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 # --- Konfigurasi halaman utama ---
 st.set_page_config(page_title="Informasi Bahan Kimia", page_icon="🧪", layout="wide")
 
