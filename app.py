@@ -22,7 +22,7 @@ if menu == "Home":
     import streamlit as st
 
 # URL gambar dari Pinterest (gambar langsung)
-    background_image_url = "https://i.pinimg.com/1200x/fa/3a/56/fa3a56b36e952c9edd9c181d2bce2dd4.jpg"
+    background_image_url = "https://i.pinimg.com/1200x/8f/9d/ee/8f9deee559e75b440c441e8ac08bf78f.jpg"
 
 # Tambahkan CSS untuk latar belakang
     st.markdown(
