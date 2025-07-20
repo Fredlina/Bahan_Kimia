@@ -73,8 +73,7 @@ elif menu == "Bahan Kimia Organik":
     """,
     unsafe_allow_html=True
     )
-
-
+    
 # Konten aplikasi Streamlit
     st.title("Aplikasi Kimia 🧪")
     st.write("Latar belakang sudah diubah dengan gambar dari Pinterest.")
@@ -222,7 +221,7 @@ elif menu == "Bahan Kimia Organik":
     ("Triethylene glycol", "C6H14O4", "Iritasi ringan", "Sedang", "Gunakan ventilasi cukup", "Humektan dan disinfektan")
 ]
         # Tambah dummy senyawa 21–150
-    for i in range(21, 138):
+    for i in senyawa_list:
         senyawa_list.append((
             f"Senyawa {i}",
             "-",
