@@ -74,10 +74,6 @@ elif menu == "Bahan Kimia Organik":
     unsafe_allow_html=True
     )
     
-# Konten aplikasi Streamlit
-    st.title("Aplikasi Kimia 🧪")
-    st.write("Latar belakang sudah diubah dengan gambar dari Pinterest.")
-   
     senyawa_list = [
     ("Benzene", "C6H6", "Karsinogen, mudah menguap", "Tinggi", "Gunakan sarung tangan dan masker, ventilasi baik", "Pelarut industri, bahan baku plastik"),
     ("Formaldehyde", "CH2O", "Iritasi mata dan saluran napas, toksik", "Tinggi", "Gunakan APD, hindari paparan langsung", "Pengawet biologis, bahan resin"),
