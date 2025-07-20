@@ -1,6 +1,4 @@
 import streamlit as st
-import streamlit as st
-import streamlit as st
 import pandas as pd
 from PIL import Image
 import base64
@@ -44,7 +42,6 @@ if menu == "Home":
     </style>
     """,
     unsafe_allow_html=True
-    )
 
 
 # Konten aplikasi Streamlit
